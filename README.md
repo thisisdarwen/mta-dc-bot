@@ -11,4 +11,10 @@ Kurulumu oldukça basit.
 
 Destek için : tugayblog@gmail.com
 
-# izinsiz paylaşılması yasaktır.
+
+# Ücretsiz olarak paylaşılmıştır. 
+
+Satışı yapılamaz
+İzinsiz paylaşılamaz (Kaynak Gösterilmelidir.)
+
+MIT lisansı bulunmaktadır. 
