@@ -1,0 +1,39 @@
+<meta>
+	<!--
+		TTG-Webhooks
+		11.08.2021
+		-->
+	<info author="Enes Bayraktar <enesbayrktar>" name="TTG Webhooks" description="Discord ile iletişimi sağlamak amaçlı kullanılan aracı robotik zımbırtı" />
+	<min_mta_version server="1.5.4-9.11342" />
+
+	<!--
+		Dosya adı: vendor.lua 
+		Açıklama: Webhook kütüphanesini içerir, kullanılacak fonksiyonlar için inceleyebilirsiniz.
+		Kaynak kod: https://github.com/FilexGH/mta-discord-webhook-library/blob/master/oop/server.lua
+		-->
+	<script src="src/vendor.lua" type="server" />
+
+	<!--
+		Dosya adı: outputDiscordChat.lua
+		Açıklama: Bot üzerinden gelen mesajları oyun içi T channel'a yazdıran fonksiyonu içerir.
+		-->
+	<script src="src/functions/outputDiscordChat.lua" type="server" />	
+
+	<!--
+		Dosya adı: onWebhookSent.lua
+		Açıklama: Webhook mesajları için onWebhookSent adlı eventi ekler.
+		-->
+	<script src="src/events/onWebhookSent.lua" type="server" />
+
+	<!--
+		Dosya adı: onPlayerChat.lua
+		Açıklama: Kullanıcılar her mesaj attığında etkilenen fonksiyonu içerir.
+		-->
+	<script src="src/events/onPlayerChat.lua" type="server" />
+
+	<!--
+		Açıklama: Bot ile uzaktan bağlanılabilmek için fonksiyonları http ile export etmemiz gerekiyor.
+		Kaynak: https://wiki.multitheftauto.com/wiki/Call
+		-->
+	<export function="outputDiscordChat" http="true" />
+</meta>
